@@ -2,6 +2,12 @@
   import { Link } from "svelte-routing";
   import { navigate } from "svelte-routing";
   import { getFirestore, collection, addDoc } from "firebase/firestore";
+  import { getAuth } from "firebase/auth";
+  import { firebaseConfig } from "../Store/firebaseConfig";
+  import { initializeApp } from "firebase/app";
+
+  initializeApp(firebaseConfig);
+  const auth = getAuth();
 
   const db = getFirestore();
 
@@ -10,19 +16,27 @@
   let title = "";
   let description = "";
   let isComplete = false;
+  let handleSubmit;
 
-  const handleSubmit = async () => {
-    if (title.length > 2) {
-      const colRef = await addDoc(collection(db, "tasks"), {
-        title,
-        description,
-        isComplete,
-      });
-      navigate("/");
-    } else {
-      error = true;
+  auth.onAuthStateChanged((user) => {
+    if(user){
+       handleSubmit = async () => {
+        if (title.length > 2) {
+          const colRef = await addDoc(collection(db, "tasks"), {
+            title,
+            description,
+            isComplete,
+          });
+          navigate("/");
+        } else {
+          error = true;
+        }
+      };
     }
-  };
+    else{
+      console.log("user is not logged in")
+    }
+  });
 </script>
 
 <main>
@@ -69,17 +83,17 @@
   }
 
   button {
-  background-color: var(--button-color);
-  border: 2px solid var(--button-color);
-  border-radius: 10px;
-  font-family: var(--font);
-  font-weight: bold;
-  font-size: 24px;
-  text-align: center;
-  width: 10rem;
-  padding: 1rem;
-  margin: 0 5px;
-}
+    background-color: var(--button-color);
+    border: 2px solid var(--button-color);
+    border-radius: 10px;
+    font-family: var(--font);
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    width: 10rem;
+    padding: 1rem;
+    margin: 0 5px;
+  }
   #cancel-btn {
     background-color: #f1fff8;
     border-color: #004221;
