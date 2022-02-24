@@ -295,10 +295,9 @@
   }
 
   .complete {
-    background-color: #a9ffd4;
+    background-color: #81ffc0;
     text-decoration: line-through;
   }
-
   .noTask,
   .logIn {
     display: block;
