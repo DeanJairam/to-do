@@ -22,11 +22,11 @@
     if (user) {
       handleSubmit = async () => {
         if (title.length > 2) {
-          console.log(user);
-          const colRef = await addDoc(collection(db, `users/${user.uid}`), {
+          const colRef = await addDoc(collection(db, "tasks"), {
             title,
             description,
             isComplete,
+            uid: user.uid,
           });
           navigate("/");
         } else {

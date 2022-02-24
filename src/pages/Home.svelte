@@ -9,6 +9,8 @@
     doc,
     updateDoc,
     deleteDoc,
+    query,
+    where,
   } from "firebase/firestore";
   import { getAuth } from "firebase/auth";
 
@@ -26,6 +28,10 @@
     if (user) {
       isLoggedIn = true;
       colRef = collection(db, "tasks");
+      const userData = query(
+        collection(db, "tasks"),
+        where("uid", "==", user.uid)
+      );
       unsubscribe = onSnapshot(colRef, (querySnapshot) => {
         let storedTasks = [];
         querySnapshot.forEach((doc) => {
