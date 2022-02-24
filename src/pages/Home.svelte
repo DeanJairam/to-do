@@ -53,8 +53,8 @@
 </script>
 
 <main>
+  <h2>Tasks</h2>
   {#each tasks as task}
-    <h2>Tasks</h2>
     <div class="task">
       <section class="section1">
         <div class="left-sec">
