@@ -22,7 +22,7 @@
   let colRef;
   $: tasks = [];
   let unsubscribe;
-  let isLoggedIn;
+  let isLoggedIn = true;
 
   auth.onAuthStateChanged((user) => {
     if (user) {
@@ -61,7 +61,7 @@
 <main>
   <h2>Tasks</h2>
   {#each tasks as task}
-    <div class="task">
+    <div class:complete={task.isComplete} class="task">
       <section class="section1">
         <div class="left-sec">
           <input type="checkbox" on:click={() => taskCompleted(task)} />
@@ -292,6 +292,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .complete {
+    background-color: #a9ffd4;
+    text-decoration: line-through;
   }
 
   .noTask,
