@@ -19,10 +19,11 @@
   let handleSubmit;
 
   auth.onAuthStateChanged((user) => {
-    if(user){
-       handleSubmit = async () => {
+    if (user) {
+      handleSubmit = async () => {
         if (title.length > 2) {
-          const colRef = await addDoc(collection(db, "tasks"), {
+          console.log(user);
+          const colRef = await addDoc(collection(db, `users/${user.uid}`), {
             title,
             description,
             isComplete,
@@ -32,9 +33,8 @@
           error = true;
         }
       };
-    }
-    else{
-      console.log("user is not logged in")
+    } else {
+      console.log("user is not logged in");
     }
   });
 </script>
