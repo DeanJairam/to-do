@@ -32,7 +32,7 @@
         collection(db, "tasks"),
         where("uid", "==", user.uid)
       );
-      unsubscribe = onSnapshot(colRef, (querySnapshot) => {
+      unsubscribe = onSnapshot(userData, (querySnapshot) => {
         let storedTasks = [];
         querySnapshot.forEach((doc) => {
           let task = { ...doc.data(), id: doc.id };
