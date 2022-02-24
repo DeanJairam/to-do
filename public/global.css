@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Rubik+Mono+One&display=swap");
+
+:root {
+  --background-color: #f1fff8;
+  --font-color: #004221;
+  --button-color: #81ffc0;
+  --task-background: #fff;
+
+  --font: "Roboto", sans-serif;
+}
+
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+navbar {
+  padding: 2vh 10vw;
+}
+
+main {
+  margin: 0 20vw;
+}
+
+h1 {
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+
+button:hover {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  background-color: var(--task-background);
+  border: 2px solid var(--font-color);
+  border-radius: 5px;
+  font-family: var(--font);
+  font-size: 18px;
+  padding: 7px;
+}
+
+@media only screen and (max-width: 425px) {
+  main {
+    margin: 0 6vw;
+  }
+}
