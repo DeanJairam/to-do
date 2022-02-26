@@ -5,6 +5,7 @@
   --font-color: #004221;
   --button-color: #81ffc0;
   --task-background: #fff;
+  --sub-font: rgba(0, 66, 33, 0.7);
 
   --font: "Roboto", sans-serif;
 }
@@ -38,6 +39,10 @@ h1 {
 
 h2 {
   text-align: center;
+}
+
+p{
+  color: var(--sub-font);
 }
 
 a {
