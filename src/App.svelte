@@ -1,7 +1,8 @@
 <script>
-  import Navbar from "./pages/Navbar.svelte";
-  import Home from "./pages/Home.svelte";
-  import Create from "./pages/Create.svelte";
+  import Navbar from "./components/Navbar.svelte";
+  import Home from "./components/Home.svelte";
+  import Create from "./components/Create.svelte";
+  import Footer from "./components/Footer.svelte";
   import { Router, Route } from "svelte-routing";
 </script>
 
@@ -13,6 +14,7 @@
   <Route path="create">
     <Create />
   </Route>
+  <Footer />
 </Router>
 
 <style>
