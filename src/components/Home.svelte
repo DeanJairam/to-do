@@ -49,7 +49,6 @@
     await updateDoc(doc(db, "tasks", task.id), {
       isComplete: !task.isComplete,
     });
-    tasks = tasks.sort((x, y) => (x === y)? 0 : x? -1 : 1);
   };
 
   const handleDelete = async (id) => {
