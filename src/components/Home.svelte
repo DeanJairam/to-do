@@ -24,20 +24,14 @@
         collection(db, "tasks"),
         where("uid", "==", user.uid)
       );
-      unsubscribe = onSnapshot(
-        userData,
-        (querySnapshot) => {
-          let storedTasks = [];
-          querySnapshot.forEach((doc) => {
-            let task = { ...doc.data(), id: doc.id };
-            storedTasks = [task, ...storedTasks];
-          });
-          tasks = storedTasks;
-        },
-        (error) => {
-          console.log(error.message);
-        }
-      );
+      unsubscribe = onSnapshot(userData, (querySnapshot) => {
+        let storedTasks = [];
+        querySnapshot.forEach((doc) => {
+          let task = { ...doc.data(), id: doc.id };
+          storedTasks = [task, ...storedTasks];
+        });
+        tasks = storedTasks;
+      });
     } else {
       isLoggedIn = false;
       tasks = [];

@@ -36,7 +36,9 @@
     {:else}
       <div>
         <button on:click={() => logOut()}>Log out</button>
-        <button on:click={() => handleImgClick()}>&times;</button>
+        <button on:click={() => handleImgClick()}
+          ><strong>&times;</strong></button
+        >
       </div>
     {/if}
   {:else}
@@ -51,15 +53,20 @@
     align-items: center;
   }
   button {
-    background: none;
+    background: #fff;
+    color: #004221;
     border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
     font-family: var(--font);
     font-weight: bold;
     font-size: 24px;
   }
-
   button:hover {
     cursor: pointer;
+  }
+  strong{
+    color: red;
   }
 
   img {

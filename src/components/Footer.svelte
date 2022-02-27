@@ -7,10 +7,10 @@
         <section>
             <strong>Follow creator :</strong>
             <a href="https://www.instagram.com/deanjairam/">
-                <img src="icons/instagram.svg" alt="instagram" />
+                <img src="icons/instagram.svg" alt="instagram icon" />
             </a>
             <a href="https://twitter.com/deanjairam">
-                <img src="icons/twitter.svg" alt="" />
+                <img src="icons/twitter.svg" alt="twitter icon" />
             </a>
         </section>
     </div>
