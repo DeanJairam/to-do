@@ -30,7 +30,7 @@
           let task = { ...doc.data(), id: doc.id };
           storedTasks = [task, ...storedTasks];
         });
-        tasks = storedTasks;
+        tasks = storedTasks.sort((value) => (value.isComplete ? 1 : -1));
       });
     } else {
       isLoggedIn = false;
@@ -56,7 +56,7 @@
     <div class:complete={task.isComplete} class="task">
       <section class="section1">
         <div class="left-sec">
-          <button
+          <span
             class="checkbox"
             on:click={() => taskCompleted(task)}
             class:checked={task.isComplete}
@@ -124,12 +124,15 @@
     margin: 0 10px;
   }
   .checkbox {
-    width: 0.1vw;
-    height: 13px;
+    width: 0.7rem;
+    height: 0.7rem;
     margin: 10px;
     border: 1px solid #004221;
     background-color: #fff;
     border-radius: 2px;
+  }
+  .checkbox:hover {
+    cursor: pointer;
   }
   .checked {
     background-color: #004221;
