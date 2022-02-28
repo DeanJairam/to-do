@@ -36,7 +36,6 @@
       });
     } else {
       isLoggedIn = false;
-      tasks = [];
       unsubscribe && unsubscribe();
     }
   });
@@ -81,11 +80,16 @@
     </div>
   {:else}
     {#if !isLoggedIn}
-      <img src="icons/signIn.svg" class="logIn" alt="" />
-      <h2>Sign in and create tasks</h2>
+      <img src="icons/happyFace.svg" class="happyFace" alt="" />
+      <h2>Hello there! Kindly sign-in to create tasks.</h2>
     {:else if !isPending && tasks.length < 1}
-      <img src="icons/noData.svg" class="noData" alt="no data" />
-      <h2>There are no tasks</h2>
+      <img
+        src="icons/astonishedFace.svg"
+        class="astonishedFace"
+        alt="no data"
+      />
+      <h2>How come you've got nothing to-do?</h2>
+      <h3>Create tasks by clicking on the ➕ button</h3>
     {:else if isPending}
       <div class="lds-ripple">
         <div />
@@ -103,9 +107,6 @@
 {/if}
 
 <style>
-  h2 {
-    margin-bottom: 2rem;
-  }
   .task {
     background-color: #fff;
     margin: 20px 0px;
@@ -121,11 +122,11 @@
     text-decoration: line-through;
   }
 
-  .logIn,
-  .noData {
+  .happyFace,
+  .astonishedFace {
     display: block;
     margin: auto;
-    width: 20rem;
+    width: 15rem;
     height: auto;
   }
 
@@ -162,6 +163,7 @@
     background-color: #81ffc0;
     border-radius: 50px;
     text-align: center;
+    z-index: 1;
   }
   .my-float {
     width: 50%;
@@ -203,7 +205,7 @@
   @media only screen and (max-width: 425px) {
     .float {
       right: 40px;
-      bottom: 40px;
+      bottom: 80px;
     }
   }
 </style>

@@ -18,7 +18,12 @@
 
 <style>
     footer {
-        margin: 4rem 0;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 1rem;
+        background-color: #f1fff8;
     }
     div {
         display: flex;

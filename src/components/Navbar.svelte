@@ -15,8 +15,8 @@
 
   const logOut = () => {
     signOut(auth);
-    navigate("/")
-  }
+    navigate("/");
+  };
 
   auth.onAuthStateChanged((user) => {
     if (user) {
@@ -50,6 +50,7 @@
   {/if}
 </navbar>
 
+
 <style>
   navbar {
     display: flex;
@@ -57,9 +58,9 @@
     align-items: center;
   }
   button {
-    background: #fff;
+    background: none;
     color: #004221;
-    border: none;
+    border: 1px solid 004221;
     border-radius: 10px;
     padding: 5px 10px;
     font-family: var(--font);
@@ -69,7 +70,7 @@
   button:hover {
     cursor: pointer;
   }
-  strong{
+  strong {
     color: red;
   }
 

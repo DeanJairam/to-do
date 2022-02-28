@@ -21587,7 +21587,7 @@ var app = (function () {
     		c: function create() {
     			h1 = element("h1");
     			h1.textContent = "to-do";
-    			add_location(h1, file$3, 35, 15, 734);
+    			add_location(h1, file$3, 35, 15, 736);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -21618,8 +21618,8 @@ var app = (function () {
     		c: function create() {
     			button = element("button");
     			button.textContent = "Sign in";
-    			attr_dev(button, "class", "svelte-koxul");
-    			add_location(button, file$3, 48, 4, 1101);
+    			attr_dev(button, "class", "svelte-1evqzkf");
+    			add_location(button, file$3, 48, 4, 1103);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -21718,13 +21718,13 @@ var app = (function () {
     			button1 = element("button");
     			strong = element("strong");
     			strong.textContent = "×";
-    			attr_dev(button0, "class", "svelte-koxul");
-    			add_location(button0, file$3, 41, 8, 902);
-    			attr_dev(strong, "class", "svelte-koxul");
-    			add_location(strong, file$3, 43, 11, 1016);
-    			attr_dev(button1, "class", "svelte-koxul");
-    			add_location(button1, file$3, 42, 8, 962);
-    			add_location(div, file$3, 40, 6, 887);
+    			attr_dev(button0, "class", "svelte-1evqzkf");
+    			add_location(button0, file$3, 41, 8, 904);
+    			attr_dev(strong, "class", "svelte-1evqzkf");
+    			add_location(strong, file$3, 43, 11, 1018);
+    			attr_dev(button1, "class", "svelte-1evqzkf");
+    			add_location(button1, file$3, 42, 8, 964);
+    			add_location(div, file$3, 40, 6, 889);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -21773,8 +21773,8 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = /*userImg*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			attr_dev(img, "class", "svelte-koxul");
-    			add_location(img, file$3, 38, 6, 804);
+    			attr_dev(img, "class", "svelte-1evqzkf");
+    			add_location(img, file$3, 38, 6, 806);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -21836,8 +21836,8 @@ var app = (function () {
     			create_component(link.$$.fragment);
     			t = space();
     			if_block.c();
-    			attr_dev(navbar, "class", "svelte-koxul");
-    			add_location(navbar, file$3, 34, 0, 709);
+    			attr_dev(navbar, "class", "svelte-1evqzkf");
+    			add_location(navbar, file$3, 34, 0, 711);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -22001,7 +22001,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (82:2) {:else}
+    // (81:2) {:else}
     function create_else_block(ctx) {
     	let if_block_anchor;
 
@@ -22047,14 +22047,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(82:2) {:else}",
+    		source: "(81:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (89:24) 
+    // (93:24) 
     function create_if_block_4(ctx) {
     	let div2;
     	let div0;
@@ -22069,12 +22069,12 @@ var app = (function () {
     			t0 = space();
     			div1 = element("div");
     			t1 = space();
-    			attr_dev(div0, "class", "svelte-1wds7wn");
-    			add_location(div0, file$2, 90, 8, 2401);
-    			attr_dev(div1, "class", "svelte-1wds7wn");
-    			add_location(div1, file$2, 91, 8, 2418);
-    			attr_dev(div2, "class", "lds-ripple svelte-1wds7wn");
-    			add_location(div2, file$2, 89, 6, 2367);
+    			attr_dev(div0, "class", "svelte-57c1jp");
+    			add_location(div0, file$2, 94, 8, 2532);
+    			attr_dev(div1, "class", "svelte-57c1jp");
+    			add_location(div1, file$2, 95, 8, 2549);
+    			attr_dev(div2, "class", "lds-ripple svelte-57c1jp");
+    			add_location(div2, file$2, 93, 6, 2498);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -22092,42 +22092,51 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(89:24) ",
+    		source: "(93:24) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (86:45) 
+    // (85:45) 
     function create_if_block_3(ctx) {
     	let img;
     	let img_src_value;
     	let t0;
     	let h2;
+    	let t2;
+    	let h3;
 
     	const block = {
     		c: function create() {
     			img = element("img");
     			t0 = space();
     			h2 = element("h2");
-    			h2.textContent = "There are no tasks";
-    			if (!src_url_equal(img.src, img_src_value = "icons/noData.svg")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "noData svelte-1wds7wn");
+    			h2.textContent = "How come you've got nothing to-do?";
+    			t2 = space();
+    			h3 = element("h3");
+    			h3.textContent = "Create tasks by clicking on the ➕ button";
+    			if (!src_url_equal(img.src, img_src_value = "icons/astonishedFace.svg")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "class", "astonishedFace svelte-57c1jp");
     			attr_dev(img, "alt", "no data");
-    			add_location(img, file$2, 86, 6, 2239);
-    			attr_dev(h2, "class", "svelte-1wds7wn");
-    			add_location(h2, file$2, 87, 6, 2306);
+    			add_location(img, file$2, 85, 6, 2247);
+    			add_location(h2, file$2, 90, 6, 2364);
+    			add_location(h3, file$2, 91, 6, 2415);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, h2, anchor);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, h3, anchor);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(img);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(h2);
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(h3);
     		}
     	};
 
@@ -22135,14 +22144,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(86:45) ",
+    		source: "(85:45) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (83:4) {#if !isLoggedIn}
+    // (82:4) {#if !isLoggedIn}
     function create_if_block_2(ctx) {
     	let img;
     	let img_src_value;
@@ -22154,13 +22163,12 @@ var app = (function () {
     			img = element("img");
     			t0 = space();
     			h2 = element("h2");
-    			h2.textContent = "Sign in and create tasks";
-    			if (!src_url_equal(img.src, img_src_value = "icons/signIn.svg")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "logIn svelte-1wds7wn");
+    			h2.textContent = "Hello there! Kindly sign-in to create tasks.";
+    			if (!src_url_equal(img.src, img_src_value = "icons/happyFace.svg")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "class", "happyFace svelte-57c1jp");
     			attr_dev(img, "alt", "");
-    			add_location(img, file$2, 83, 6, 2092);
-    			attr_dev(h2, "class", "svelte-1wds7wn");
-    			add_location(h2, file$2, 84, 6, 2151);
+    			add_location(img, file$2, 82, 6, 2073);
+    			add_location(h2, file$2, 83, 6, 2139);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -22178,14 +22186,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(83:4) {#if !isLoggedIn}",
+    		source: "(82:4) {#if !isLoggedIn}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (68:8) {#if task.description.length > 0}
+    // (67:8) {#if task.description.length > 0}
     function create_if_block_1(ctx) {
     	let div;
     	let p;
@@ -22197,9 +22205,9 @@ var app = (function () {
     			div = element("div");
     			p = element("p");
     			t = text(t_value);
-    			add_location(p, file$2, 69, 12, 1793);
-    			attr_dev(div, "class", "below-sec svelte-1wds7wn");
-    			add_location(div, file$2, 68, 10, 1756);
+    			add_location(p, file$2, 68, 12, 1774);
+    			attr_dev(div, "class", "below-sec svelte-57c1jp");
+    			add_location(div, file$2, 67, 10, 1737);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -22218,14 +22226,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(68:8) {#if task.description.length > 0}",
+    		source: "(67:8) {#if task.description.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (57:2) {#each tasks as task}
+    // (56:2) {#each tasks as task}
     function create_each_block(ctx) {
     	let div1;
     	let section0;
@@ -22269,21 +22277,21 @@ var app = (function () {
     			section1 = element("section");
     			img = element("img");
     			t4 = space();
-    			attr_dev(span, "class", "checkbox svelte-1wds7wn");
+    			attr_dev(span, "class", "checkbox svelte-57c1jp");
     			toggle_class(span, "checked", /*task*/ ctx[9].isComplete);
-    			add_location(span, file$2, 60, 10, 1508);
-    			add_location(h4, file$2, 65, 10, 1664);
-    			attr_dev(div0, "class", "left-sec svelte-1wds7wn");
-    			add_location(div0, file$2, 59, 8, 1474);
+    			add_location(span, file$2, 59, 10, 1489);
+    			add_location(h4, file$2, 64, 10, 1645);
+    			attr_dev(div0, "class", "left-sec svelte-57c1jp");
+    			add_location(div0, file$2, 58, 8, 1455);
     			attr_dev(section0, "class", "section1");
-    			add_location(section0, file$2, 58, 6, 1438);
+    			add_location(section0, file$2, 57, 6, 1419);
     			if (!src_url_equal(img.src, img_src_value = "icons/delete.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "delete");
-    			add_location(img, file$2, 74, 8, 1896);
-    			add_location(section1, file$2, 73, 6, 1877);
-    			attr_dev(div1, "class", "task svelte-1wds7wn");
+    			add_location(img, file$2, 73, 8, 1877);
+    			add_location(section1, file$2, 72, 6, 1858);
+    			attr_dev(div1, "class", "task svelte-57c1jp");
     			toggle_class(div1, "complete", /*task*/ ctx[9].isComplete);
-    			add_location(div1, file$2, 57, 4, 1379);
+    			add_location(div1, file$2, 56, 4, 1360);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -22347,14 +22355,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(57:2) {#each tasks as task}",
+    		source: "(56:2) {#each tasks as task}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (97:0) {#if isLoggedIn}
+    // (101:0) {#if isLoggedIn}
     function create_if_block$1(ctx) {
     	let link;
     	let current;
@@ -22395,14 +22403,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(97:0) {#if isLoggedIn}",
+    		source: "(101:0) {#if isLoggedIn}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (98:2) <Link to="create" title="Create">
+    // (102:2) <Link to="create" title="Create">
     function create_default_slot$2(ctx) {
     	let a;
     	let img;
@@ -22413,12 +22421,12 @@ var app = (function () {
     			a = element("a");
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "icons/createSymbol.svg")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "my-float svelte-1wds7wn");
+    			attr_dev(img, "class", "my-float svelte-57c1jp");
     			attr_dev(img, "alt", "Create");
-    			add_location(img, file$2, 99, 6, 2570);
+    			add_location(img, file$2, 103, 6, 2701);
     			attr_dev(a, "href", "create");
-    			attr_dev(a, "class", "float svelte-1wds7wn");
-    			add_location(a, file$2, 98, 4, 2531);
+    			attr_dev(a, "class", "float svelte-57c1jp");
+    			add_location(a, file$2, 102, 4, 2662);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -22433,7 +22441,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(98:2) <Link to=\\\"create\\\" title=\\\"Create\\\">",
+    		source: "(102:2) <Link to=\\\"create\\\" title=\\\"Create\\\">",
     		ctx
     	});
 
@@ -22481,9 +22489,8 @@ var app = (function () {
     			t2 = space();
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
-    			attr_dev(h2, "class", "svelte-1wds7wn");
-    			add_location(h2, file$2, 55, 2, 1334);
-    			add_location(main, file$2, 54, 0, 1324);
+    			add_location(h2, file$2, 54, 2, 1315);
+    			add_location(main, file$2, 53, 0, 1305);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -22621,7 +22628,6 @@ var app = (function () {
     			});
     		} else {
     			$$invalidate(1, isLoggedIn = false);
-    			$$invalidate(0, tasks = []);
     			unsubscribe && unsubscribe();
     		}
     	});
@@ -23080,30 +23086,30 @@ var app = (function () {
     			t5 = space();
     			a1 = element("a");
     			img1 = element("img");
-    			attr_dev(hr, "class", "svelte-cg48gn");
+    			attr_dev(hr, "class", "svelte-1dec9ia");
     			add_location(hr, file, 1, 4, 14);
-    			attr_dev(p, "class", "svelte-cg48gn");
+    			attr_dev(p, "class", "svelte-1dec9ia");
     			add_location(p, file, 4, 12, 64);
-    			attr_dev(section0, "class", "svelte-cg48gn");
+    			attr_dev(section0, "class", "svelte-1dec9ia");
     			add_location(section0, file, 3, 8, 41);
     			add_location(strong, file, 7, 12, 146);
     			if (!src_url_equal(img0.src, img0_src_value = "icons/instagram.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "instagram icon");
-    			attr_dev(img0, "class", "svelte-cg48gn");
+    			attr_dev(img0, "class", "svelte-1dec9ia");
     			add_location(img0, file, 9, 16, 259);
     			attr_dev(a0, "href", "https://www.instagram.com/deanjairam/");
     			add_location(a0, file, 8, 12, 193);
     			if (!src_url_equal(img1.src, img1_src_value = "icons/twitter.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "twitter icon");
-    			attr_dev(img1, "class", "svelte-cg48gn");
+    			attr_dev(img1, "class", "svelte-1dec9ia");
     			add_location(img1, file, 12, 16, 404);
     			attr_dev(a1, "href", "https://twitter.com/deanjairam");
     			add_location(a1, file, 11, 12, 345);
-    			attr_dev(section1, "class", "svelte-cg48gn");
+    			attr_dev(section1, "class", "svelte-1dec9ia");
     			add_location(section1, file, 6, 8, 123);
-    			attr_dev(div, "class", "svelte-cg48gn");
+    			attr_dev(div, "class", "svelte-1dec9ia");
     			add_location(div, file, 2, 4, 26);
-    			attr_dev(footer, "class", "svelte-cg48gn");
+    			attr_dev(footer, "class", "svelte-1dec9ia");
     			add_location(footer, file, 0, 0, 0);
     		},
     		l: function claim(nodes) {
