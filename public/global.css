@@ -31,17 +31,19 @@ navbar {
 
 main {
   margin: 0 20vw;
+  padding-bottom: 7rem;
 }
 
 h1 {
   font-family: "Rubik Mono One", sans-serif;
 }
 
-h2, h3 {
+h2,
+h3 {
   text-align: center;
 }
 
-p{
+p {
   color: var(--sub-font);
 }
 

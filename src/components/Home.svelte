@@ -88,7 +88,7 @@
         class="astonishedFace"
         alt="no data"
       />
-      <h2>How come you've got nothing to-do?</h2>
+      <h2>There are no tasks here. How could there be nothing to do?</h2>
       <h3>Create tasks by clicking on the ➕ button</h3>
     {:else if isPending}
       <div class="lds-ripple">
