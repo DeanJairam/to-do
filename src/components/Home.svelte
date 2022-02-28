@@ -15,6 +15,7 @@
   let tasks = [];
   let unsubscribe;
   let isLoggedIn = true;
+  let isPending = true;
 
   auth.onAuthStateChanged((user) => {
     if (user) {
@@ -31,6 +32,7 @@
           storedTasks = [task, ...storedTasks];
         });
         tasks = storedTasks.sort((value) => (value.isComplete ? 1 : -1));
+        isPending = false;
       });
     } else {
       isLoggedIn = false;
@@ -81,6 +83,14 @@
     {#if !isLoggedIn}
       <img src="icons/signIn.svg" class="logIn" alt="" />
       <h2>Sign in and create tasks</h2>
+    {:else if !isPending && tasks.length < 1}
+      <img src="icons/noData.svg" class="noData" alt="no data" />
+      <h2>There are no tasks</h2>
+    {:else if isPending}
+      <div class="lds-ripple">
+        <div />
+        <div />
+      </div>
     {/if}
   {/each}
 </main>
@@ -93,6 +103,9 @@
 {/if}
 
 <style>
+  h2 {
+    margin-bottom: 2rem;
+  }
   .task {
     background-color: #fff;
     margin: 20px 0px;
@@ -108,7 +121,8 @@
     text-decoration: line-through;
   }
 
-  .logIn {
+  .logIn,
+  .noData {
     display: block;
     margin: auto;
     width: 20rem;
@@ -152,6 +166,39 @@
   .my-float {
     width: 50%;
     height: auto;
+  }
+  .lds-ripple {
+    display: block;
+    position: relative;
+    margin: 5rem auto;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #004221;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
   }
   @media only screen and (max-width: 425px) {
     .float {

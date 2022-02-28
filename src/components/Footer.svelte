@@ -18,7 +18,7 @@
 
 <style>
     footer {
-        margin: 5rem 0;;
+        margin: 4rem 0;
     }
     div {
         display: flex;
@@ -34,7 +34,7 @@
     }
     hr {
         width: 80vw;
-        border: 1px solid rgba(0, 66, 33, 0.5);
+        border-color: rgba(0, 66, 33, 0.2);
     }
     p {
         text-align: center;

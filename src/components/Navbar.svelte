@@ -1,5 +1,6 @@
 <script>
   import { Link } from "svelte-routing";
+  import { navigate } from "svelte-routing";
   import { signInWithPopup, signOut } from "firebase/auth";
   import { auth, provider } from "../Store/firebaseConfig";
 
@@ -12,7 +13,10 @@
     imgClick = false;
   };
 
-  const logOut = () => signOut(auth);
+  const logOut = () => {
+    signOut(auth);
+    navigate("/")
+  }
 
   auth.onAuthStateChanged((user) => {
     if (user) {

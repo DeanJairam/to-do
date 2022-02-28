@@ -26,8 +26,6 @@
           error = true;
         }
       };
-    } else {
-      console.log("user is not logged in");
     }
   });
 </script>
