@@ -204,8 +204,7 @@
   }
   @media only screen and (max-width: 425px) {
     .float {
-      right: 40px;
-      bottom: 80px;
+      right: 30px;
     }
   }
 </style>

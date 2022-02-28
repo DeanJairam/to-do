@@ -5,7 +5,6 @@
             <p>Copyright © 2022 TO-DO</p>
         </section>
         <section>
-            <strong>Follow creator :</strong>
             <a href="https://www.instagram.com/deanjairam/">
                 <img src="icons/instagram.svg" alt="instagram icon" />
             </a>
@@ -22,11 +21,11 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        margin-bottom: 1rem;
         background-color: #f1fff8;
     }
     div {
         display: flex;
+        padding-bottom: 1rem;
         justify-content: space-around;
         align-items: center;
     }
@@ -45,9 +44,5 @@
         text-align: center;
     }
     @media only screen and (max-width: 425px) {
-        div {
-            justify-content: center;
-            flex-direction: column;
-        }
     }
 </style>
