@@ -81,13 +81,13 @@
         </section>
       </div>
     {/each}
+  {:else if !isLoggedIn}
+    <img src="icons/happyFace.svg" class="happyFace" alt="" />
+    <h2>Hello there! Kindly sign-in to create tasks.</h2>
   {:else if tasks.length < 1 && !isPending}
     <img src="icons/astonishedFace.svg" class="astonishedFace" alt="no data" />
     <h2>There are no tasks here.</h2>
     <h3>Create tasks by clicking on the ➕ button.</h3>
-  {:else if !isLoggedIn}
-    <img src="icons/happyFace.svg" class="happyFace" alt="" />
-    <h2>Hello there! Kindly sign-in to create tasks.</h2>
   {:else if isPending}
     <div class="lds-ripple">
       <div />
