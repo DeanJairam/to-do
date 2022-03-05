@@ -53,50 +53,47 @@
 
 <main>
   <h2>Tasks</h2>
-  {#each tasks as task}
-    <div class:complete={task.isComplete} class="task">
-      <section class="section1">
-        <div class="left-sec">
-          <span
-            class="checkbox"
-            on:click={() => taskCompleted(task)}
-            class:checked={task.isComplete}
-          />
-          <h4>{task.title}</h4>
-        </div>
-        {#if task.description.length > 0}
-          <div class="below-sec">
-            <p>{task.description}</p>
+  {#if isLoggedIn && tasks.length > 0}
+    {#each tasks as task}
+      <div class:complete={task.isComplete} class="task">
+        <section class="section1">
+          <div class="left-sec">
+            <span
+              class="checkbox"
+              on:click={() => taskCompleted(task)}
+              class:checked={task.isComplete}
+            />
+            <h4>{task.title}</h4>
           </div>
-        {/if}
-      </section>
-      <section>
-        <img
-          src="icons/delete.svg"
-          alt="delete"
-          on:click={() => handleDelete(task.id)}
-        />
-      </section>
-    </div>
-  {:else}
-    {#if !isLoggedIn}
-      <img src="icons/happyFace.svg" class="happyFace" alt="" />
-      <h2>Hello there! Kindly sign-in to create tasks.</h2>
-    {:else if !isPending && tasks.length < 1}
-      <img
-        src="icons/astonishedFace.svg"
-        class="astonishedFace"
-        alt="no data"
-      />
-      <h2>There are no tasks here. How could there be nothing to do?</h2>
-      <h3>Create tasks by clicking on the ➕ button</h3>
-    {:else if isPending}
-      <div class="lds-ripple">
-        <div />
-        <div />
+          {#if task.description.length > 0}
+            <div class="below-sec">
+              <p>{task.description}</p>
+            </div>
+          {/if}
+        </section>
+        <section>
+          <img
+            src="icons/delete.svg"
+            class="deleteIcon"
+            alt="delete"
+            on:click={() => handleDelete(task.id)}
+          />
+        </section>
       </div>
-    {/if}
-  {/each}
+    {/each}
+  {:else if tasks.length < 1 && !isPending}
+    <img src="icons/astonishedFace.svg" class="astonishedFace" alt="no data" />
+    <h2>There are no tasks here.</h2>
+    <h3>Create tasks by clicking on the ➕ button.</h3>
+  {:else if !isLoggedIn}
+    <img src="icons/happyFace.svg" class="happyFace" alt="" />
+    <h2>Hello there! Kindly sign-in to create tasks.</h2>
+  {:else if isPending}
+    <div class="lds-ripple">
+      <div />
+      <div />
+    </div>
+  {/if}
 </main>
 {#if isLoggedIn}
   <Link to="create" title="Create">
@@ -146,7 +143,7 @@
     background-color: #fff;
     border-radius: 2px;
   }
-  .checkbox:hover {
+  .checkbox:hover, .deleteIcon:hover {
     cursor: pointer;
   }
   .checked {

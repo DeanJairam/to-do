@@ -3,21 +3,17 @@
   import { navigate } from "svelte-routing";
   import { signInWithPopup, signOut } from "firebase/auth";
   import { auth, provider } from "../Store/firebaseConfig";
-
   let isLoggedIn = true;
   let userImg;
   let imgClick = false;
-
   const signIn = () => {
     signInWithPopup(auth, provider);
     imgClick = false;
   };
-
   const logOut = () => {
     signOut(auth);
     navigate("/");
   };
-
   auth.onAuthStateChanged((user) => {
     if (user) {
       isLoggedIn = true;
@@ -26,7 +22,6 @@
       isLoggedIn = false;
     }
   });
-
   const handleImgClick = () => {
     imgClick = !imgClick;
   };
@@ -50,7 +45,6 @@
   {/if}
 </navbar>
 
-
 <style>
   navbar {
     display: flex;
@@ -60,7 +54,7 @@
   button {
     background: none;
     color: #004221;
-    border: 1px solid 004221;
+    border: 2px solid #004221;
     border-radius: 10px;
     padding: 5px 10px;
     font-family: var(--font);
@@ -73,7 +67,6 @@
   strong {
     color: red;
   }
-
   img {
     width: 2.5rem;
     border-radius: 10px;

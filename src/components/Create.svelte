@@ -5,22 +5,24 @@
   import { db, auth } from "../Store/firebaseConfig";
 
   let error = false;
-
   let title = "";
   let description = "";
   let isComplete = false;
   let handleSubmit;
+  let additionPending = false;
 
   auth.onAuthStateChanged((user) => {
     if (user) {
       handleSubmit = async () => {
         if (title.length > 2) {
+          additionPending = true;
           await addDoc(collection(db, "tasks"), {
             title,
             description,
             isComplete,
             uid: user.uid,
           });
+          additionPending = false;
           navigate("/");
         } else {
           error = true;
@@ -29,7 +31,6 @@
     }
   });
 </script>
-
 <main>
   <h2>Create task</h2>
   <form on:submit|preventDefault={handleSubmit}>
@@ -46,7 +47,13 @@
     <textarea placeholder="Description(optional)" bind:value={description} />
   </form>
   <section>
-    <button id="add-btn" on:click={handleSubmit}>Add</button>
+    <button id="add-btn" on:click={handleSubmit}>
+      {#if !additionPending}
+        Add
+      {:else if additionPending}
+        Adding
+      {/if}
+    </button>
     <Link to="/"><button id="cancel-btn">Cancel</button></Link>
   </section>
 </main>

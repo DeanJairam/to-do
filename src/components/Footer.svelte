@@ -5,7 +5,7 @@
             <p>Copyright © 2022 TO-DO</p>
         </section>
         <section>
-            <a href="https://www.instagram.com/deanjairam/">
+            <a href="https://instagram.com/deanjairam/">
                 <img src="icons/instagram.svg" alt="instagram icon" />
             </a>
             <a href="https://twitter.com/deanjairam">
